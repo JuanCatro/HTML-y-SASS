@@ -1,0 +1,115 @@
+/* ----- Sección de información personal (Landing) ----- */
+#personal-info {
+  background: linear-gradient(135deg, $primary-color, darken($primary-color, 10%));
+  text-align: center;
+  padding: 2rem;
+  color: $text-color;
+
+  .profile-photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid $secondary-color;
+    box-shadow: 0 0 15px rgba($secondary-color, 0.7);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  h2 {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    color: $secondary-color;
+  }
+
+  .social-links {
+    margin-top: 1rem;
+
+    a {
+      margin: 0 0.5rem;
+      color: $accent-color;
+      font-weight: bold;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: lighten($accent-color, 15%);
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  #personal-info {
+    padding: 1rem;
+
+    .profile-photo {
+      width: 120px;
+      height: 120px;
+    }
+  }
+}
+
+/* ----- Formulario (Sign Up) ----- */
+body.signup {
+  background: $primary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: $white;
+  padding: 20px 30px;
+  border-radius: $border-radius;
+  width: 400px;
+  box-shadow: $box-shadow;
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: $secondary-color;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+@media (max-width: $breakpoint-mobile) {
+  #personal-info {
+    text-align: center;
+
+    .profile-photo {
+      width: 100px;
+      height: 100px;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+    }
+  }
+
+  /* Formulario responsive */
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .container h2 {
+    font-size: 1.4rem;
+  }
+
+  input, button {
+    font-size: 14px;
+  }
+}
+
+
+
+
+

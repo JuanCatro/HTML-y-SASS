@@ -1,0 +1,87 @@
+/* ----- Sección Skills (Landing) ----- */
+#skills {
+  padding: 2rem;
+  background-color: $primary-color;
+  color: $text-color;
+  text-align: center;
+
+  h2 {
+    color: $accent-color;
+    margin-bottom: 1.5rem;
+  }
+
+  .skills-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .skills-col {
+    flex: 1;
+    min-width: 250px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid rgba($secondary-color, 0.4);
+    box-shadow: 0 0 10px rgba($secondary-color, 0.2);
+
+    h3 {
+      color: $secondary-color;
+      margin-bottom: 0.5rem;
+    }
+
+    li {
+      list-style: none;
+      margin: 0.5rem 0;
+      padding: 0.3rem;
+      border-bottom: 1px solid rgba($secondary-color, 0.2);
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  #skills {
+    .skills-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+/* ----- Inputs (Form Sign Up) ----- */
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid lighten($primary-color, 20%);
+  border-radius: 5px;
+
+  &:focus {
+    outline: none;
+    border: 2px solid $secondary-color;
+  }
+
+  &:valid {
+    border: 2px solid $success-color;
+  }
+
+  &:invalid {
+    border: 2px solid $error-color;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  #skills .skills-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #skills .skills-col {
+    width: 100%;
+  }
+}
+
+
+
+
